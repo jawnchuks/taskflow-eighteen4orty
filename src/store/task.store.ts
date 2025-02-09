@@ -1,13 +1,5 @@
 import { create } from 'zustand'
-
-interface Task {
-  id: string
-  title: string
-  description: string
-  dueDate: string
-  priority: 'low' | 'medium' | 'high'
-  status: 'to-do' | 'in-progress' | 'done'
-}
+import { Task } from '../types/task'
 
 interface TaskStore {
   tasks: Task[]
