@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Taskflow - An 1840 Task assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Task Management Application** built using **React**, **TypeScript**, and **Vite**. It provides an interactive Kanban-style task board with **drag-and-drop** functionality, task creation, and state management using **Zustand**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Task creation, updating, and deletion
+- **Drag-and-drop** support for task movement
+- State management using **Zustand**
+- **React Testing Library** with Jest for unit tests
+- Built with **Vite** for fast development and optimized builds
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** (with TypeScript)
+- **Vite** (for fast build and development)
+- **Zustand** (for global state management)
+- **React DnD** (for drag-and-drop support)
+- **Jest & React Testing Library** (for unit testing)
+- **ESLint & Prettier** (for code linting and formatting)
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📖 Installation & Setup
+
+Ensure you have **Node.js (>=16.0.0)** installed.
+
+### 1️⃣ Clone the repository
+```sh
+git clone https://github.com/jawnchuks/taskflow-eighteen4orty
+cd task-manager
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2️⃣ Install dependencies
+```sh
+yarn install  # or npm install
 ```
+
+### 3️⃣ Run the application
+```sh
+yarn dev  # or npm run dev
+```
+The app will be available at **http://localhost:5173**.
+
+### 4️⃣ Run tests
+```sh
+yarn test  # or npm run test
+```
+
+---
+
+## 🏗️ Project Structure
+```
+📂 src
+├── 📂 components        # UI components
+├── 📂 store             # Zustand state management
+├── 📂 types             # TypeScript type definitions
+├── 📂 utils             # Utility functions
+└── 📂 tests             # Unit tests with Jest
+```
+
+---
+
+## 📝 Development Approach
+
+- **State Management:** We use Zustand for a simple yet powerful state management solution.
+- **Testing:** We use **React Testing Library** and **Jest** to test key components, including task forms, drag-and-drop interactions, and store logic.
+- **Performance Optimization:** Vite is used for **fast hot-module replacement (HMR)** and optimized builds.
+- **Component Abstraction:** The UI is broken down into **reusable** components for better maintainability.
+
+---
+
+## ⚠️ Additional Notes
+
+- **ESLint & Prettier** are configured to enforce code quality.
+- **React DnD** is used for drag-and-drop task management.
+- The application is structured to support **scalability** and further feature additions.
+
+Feel free to contribute or raise issues! 🚀
+
